@@ -16,15 +16,6 @@ Route::get('Products/create', function () {
     echo "formulario para crear un producto";
 });
 
-Route::get('Products/computados', function () {
-    echo "producto: computador";
-});
-Route::get('Products/teclado', function () {
-    echo "producto: computador";
-});
-Route::get('Products/mouse', function () {
-    echo "producto: mouse";
-});
 
 Route::get('Products/{name}', function ($name) {
     echo "producto: $name";
