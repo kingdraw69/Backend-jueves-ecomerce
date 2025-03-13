@@ -6,9 +6,9 @@ use App\Http\Controllers\ProductController;
 
 Route::get('/', HomeControler::class);
 
-Route::prefix('/products')->controller((ProductController::class))->group(function () {
+Route::prefix('/products')->controller(ProductController::class)->group(function () {
     Route::get('/', 'index' );
-    Route::get('/create','create' );
+    Route::get('/create','create');
     Route::get('/{name}','show');
 });
 
