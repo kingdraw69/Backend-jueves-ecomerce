@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layout.app')
 
 @section('title', 'Lista de Productos')
 
@@ -16,7 +16,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ $producto->nombre }}</h5>
                         <p class="card-text text-muted">${{ number_format($producto->precio, 2) }}</p>
-                        <a href="{{ route('productos.show', $producto->id) }}" class="btn btn-warning w-100">👁 Ver más</a>
+                        <a href="{{ route('products.show', $producto->id) }}" class="btn btn-warning w-100">Ver más</a>
                     </div>
                 </div>
             </div>

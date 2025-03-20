@@ -13,7 +13,19 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('product',function(Blueprint $table){
+            $table->id();
+            
+            $table->string('name');
+            $table->string('description');
+            $table->decimal('price');
+           
+
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('category');
+
+            $table->timestamps();
+        });
     }
 
     /**

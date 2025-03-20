@@ -19,9 +19,9 @@ class ProductController extends Controller
         return view('products.create'); // Cargar la vista de creación de productos
         
     }
-    public function show($name){
-        echo "PRODUCTO: $name";
-
+    public function show($id){
+        $producto = Product::findOrFail($id);
+        return view('products.show', compact('producto'));
     }
     
 }
