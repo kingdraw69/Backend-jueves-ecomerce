@@ -30,7 +30,5 @@ class categorySeeder extends Seeder
         $categoria_elec_3->description = "esta es la categoria del electrodomesticos...";
         $categoria_elec_3->save();
 
-        Category::factory(1000)->create();
-
     }
 }

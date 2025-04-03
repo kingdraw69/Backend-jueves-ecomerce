@@ -9,14 +9,17 @@
     </div>
 
     <div class="row">
-        @foreach($productos as $producto)
+        @foreach($listProducts as $product)
+
+
             <div class="col-md-4 mb-4"> 
-                <div class="card h-100 shadow-sm">
-                    <img src="{{ $producto->imagen }}" class="card-img-top" alt="{{ $producto->nombre }}">
+                <div class="product-card">
+                    <img src="{{ $product->url_image }}" class="img-fluid" alt="{{ $product->name }}">
                     <div class="card-body">
-                        <h5 class="card-title">{{ $producto->nombre }}</h5>
-                        <p class="card-text text-muted">${{ number_format($producto->precio, 2) }}</p>
-                        <a href="{{ route('products.show', $producto->id) }}" class="btn btn-warning w-100">Ver más</a>
+                        <h5 class="card-title">{{ $product->name }}</h5>
+                        <p class="text-muted">categorá: {{ $product->category_id }}</p>
+                        <div class="product-price">${{$product->price}}</div>
+                        <button class="btn btn-primary">Agragar añ carrito</button>
                     </div>
                 </div>
             </div>
