@@ -24,6 +24,9 @@
                 </div>
             </div>
         @endforeach
+        
+        {{$lisrProducts->links()}}
+
     </div>
 @endsection
 
