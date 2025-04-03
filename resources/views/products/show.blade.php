@@ -7,15 +7,15 @@
     <div class="row">
         <!-- Imagen del producto -->
         <div class="col-md-5 d-flex justify-content-center">
-            <img src="{{ $producto->imagen }}" class="img-fluid border rounded" alt="{{ $producto->nombre }}">
+            <img src="{{ $product->url_image }}" class="img-fluid border rounded" alt="{{ $product->name }}">
         </div>
         
         <!-- Información del producto -->
         <div class="col-md-7">
-            <h2 class="text-warning">{{ $producto->nombre }}</h2>
-            <p><strong>Categoría:</strong> {{ $producto->categoria }}</p>
-            <p>{{ $producto->descripcion }}</p>
-            <h3 class="text-dark">${{ number_format($producto->precio, 2) }}</h3>
+            <h2 class="text-warning">{{ $product->name }}</h2>
+            <p><strong>Categoría:</strong> {{ $product->category_id }}</p>
+            <p>{{ $product->description }}</p>
+            <h3 class="text-dark">${{ number_format($producto->price) }}</h3>
 
             <button class="btn btn-warning mt-3">Agregar al Carrito</button>
         </div>
