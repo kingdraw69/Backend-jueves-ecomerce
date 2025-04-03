@@ -17,9 +17,11 @@ return new class extends Migration
             $table->id();
             
             $table->string('name');
-            $table->string('description');
+            $table->text('description');
             $table->decimal('price');
            
+            $table->string('url_image');
+
 
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('category');
