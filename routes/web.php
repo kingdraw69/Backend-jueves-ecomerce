@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeControler;
 use App\Http\Controllers\ProductController;
 
-Route::get('/', HomeControler::class);
+
 
 Route::prefix('/products')->controller(ProductController::class)->group(function () {
     Route::get('/', 'index' )->name('products.index');
@@ -16,3 +16,8 @@ Route::prefix('/products')->controller(ProductController::class)->group(function
 //Route::get('Products/{name}/{category}', function ($name, $category) {
 //    echo "producto: $name, y tiene una categoria $category";
 //});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeControler::class, 'welcome']);
