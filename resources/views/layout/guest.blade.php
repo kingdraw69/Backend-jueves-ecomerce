@@ -26,32 +26,7 @@
             text-decoration: none;
             font-weight: 600;
         }
-        .login-box {
-            max-width: 500px;
-            margin: auto;
-            margin-top: 50px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            padding: 30px;
-        }
-        .login-header {
-            background-color: #f49e17;
-            padding: 10px;
-            color: white;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            font-weight: 600;
-        }
-        .form-check-label {
-            font-size: 0.9rem;
-        }
-        .footer {
-            margin-top: 50px;
-            font-size: 0.8rem;
-            text-align: center;
-            color: #888;
-        }
+        
     </style>
 </head>
 <body>
